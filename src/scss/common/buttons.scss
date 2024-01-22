@@ -1,0 +1,25 @@
+.button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 3px solid transparent;
+    color: $white;
+    border-radius: $bord10;
+    font-family: $ff;
+    font-weight: $fw-medium;
+    font-size: $fs-lg;
+    transition: border-color ease $tr, background-color ease $tr,
+        color ease $tr;
+
+    &.blue {
+        background-color: $blue;
+        border-color: $blue;
+
+        &:hover {
+            background-color: $white;
+            color: $blue;
+        }
+    }
+}

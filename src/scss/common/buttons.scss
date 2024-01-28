@@ -23,3 +23,82 @@
         }
     }
 }
+
+.tab__button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid $blue;
+    color: $blue;
+    background-color: $white;
+    border-radius: $bord10;
+    font-family: $ff;
+    font-weight: $fw-medium;
+    font-size: $fs-md;
+    transition: border-color ease $tr, background-color ease $tr,
+        color ease $tr;
+   
+    &:hover {
+        background-color: $blue;
+        color: $white;
+    }
+
+    &.active {
+        background-color: $blue;
+        color: $white;
+    }
+}
+
+.swiper-prev, .swiper-next {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity ease $tr;
+
+    span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-top: 8px solid $blue;
+        border-right: 8px solid $blue;
+        border-radius: 5px;
+    }
+
+    &:hover {
+        opacity: $op;
+    }
+
+    &-disabled {
+        opacity: 0.4;
+    }
+}
+
+.swiper-prev {
+    span {
+        transform: rotate(-135deg);
+    }
+}
+
+.swiper-next {
+    span {
+        transform: rotate(45deg);
+    }
+}
+
+.swiper-button {
+    transition: opacity ease $tr;
+
+    &-disabled {
+        opacity: 0.3;
+
+        &:hover {
+            opacity: 0.3;
+        }
+    }
+}
+
